@@ -1,0 +1,37 @@
+.filter-tag-row {
+  @apply flex sm:flex-wrap justify-between items-center gap-x-4 mdLg:gap-y-7 py-4 mb-6;
+
+  &--left {
+    @apply flex justify-start items-center gap-x-5 xl:gap-x-3.5;
+
+    .filter-wrapper {
+      @apply relative hidden mdLg:block;
+
+      .filter-dropdown {
+        @apply flex justify-start items-center gap-x-1.5 cursor-pointer;
+
+        .selected-text {
+          @apply text-[14px] text-grey-700;
+        }
+      }
+    }
+
+    .filter-tag-item {
+      @apply flex mdLg:hidden justify-center items-center gap-x-1.5 cursor-pointer;
+
+      .text {
+        @apply text-[15px] xl:text-[14px] text-grey-500;
+      }
+
+      .tag {
+        @apply text-[11.75px] font-medium text-white bg-orange-500 rounded-[5px] px-1.5 py-0.5 w-auto;
+      }
+
+      &--active {
+        .text {
+          @apply text-black-accent font-medium;
+        }
+      }
+    }
+  }
+}

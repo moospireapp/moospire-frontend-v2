@@ -1,0 +1,46 @@
+.toast-card {
+  @apply fixed overflow-hidden z-50 rounded-lg top-7 right-3 min-w-[auto] max-w-[45%] animate-drift-right;
+  filter: drop-shadow(2px 3px 3px rgba(0, 54, 27, 0.1));
+
+  &-content {
+    @apply flex justify-start items-center bg-white;
+
+    &--right {
+      @apply flex justify-between items-center gap-x-6 h-full py-2.5 pl-5 pr-4 bg-white;
+
+      .message-text {
+        @apply capitalize font-medium text-sm mb-0.5 text-red-500;
+      }
+
+      .description-text {
+        @apply text-xs text-black-accent/75;
+      }
+
+      .icon {
+        @apply text-lg cursor-pointer;
+      }
+    }
+  }
+}
+
+.success-toast {
+  .toast-card-content {
+    .message-text {
+      @apply text-green-600;
+    }
+  }
+}
+
+.warning-toast {
+  .toast-card-content {
+    .message-text {
+      @apply text-yellow-600;
+    }
+  }
+
+  .error-toast {
+    .message-text {
+      @apply text-red-400;
+    }
+  }
+}

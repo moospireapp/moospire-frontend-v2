@@ -1,0 +1,19 @@
+.app-container {
+  @apply my-0 mx-auto w-[calc(100%-2em)];
+
+  @include breakpoint-up(xxs) {
+    @apply w-[calc(100%-2em)];
+  }
+
+  @include breakpoint-up(sm) {
+    @apply w-[calc(100%-3em)];
+  }
+
+  @include breakpoint-up(lg) {
+    @apply max-w-[1100px] w-[calc(100%-6em)];
+  }
+
+  @include breakpoint-up(xxl) {
+    @apply max-w-[1280px] w-[calc(100%-2em)];
+  }
+}

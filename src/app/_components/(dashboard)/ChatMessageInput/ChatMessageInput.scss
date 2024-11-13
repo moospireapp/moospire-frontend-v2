@@ -1,0 +1,56 @@
+.chat-message-input {
+  @apply relative rounded-[14px] border border-grey-100 w-full mx-auto;
+
+  .chat-input--top {
+    @apply px-6 sm:px-3 py-4 bg-white rounded-t-[14px];
+
+    .extended-textarea[contentEditable] {
+      &:empty {
+        &::before {
+          content: "Ready to spark? Tell me your idea!";
+          @apply text-grey-300/90 text-[13.5px];
+        }
+      }
+    }
+
+    .extended-textarea {
+      @apply text-sm sm:text-[13px] mb-0 text-grey-800 w-full cursor-text min-h-6 h-auto max-h-[96px] overflow-auto outline-none text-wrap whitespace-pre-wrap border-none;
+
+      &::-webkit-scrollbar {
+        @apply w-1;
+      }
+
+      &::-webkit-scrollbar-track {
+        @apply rounded-sm;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        @apply rounded-sm bg-grey-200;
+      }
+
+      a {
+        @apply text-orange-500;
+      }
+    }
+  }
+
+  .chat-input--base {
+    @apply px-6 sm:px-3 py-2 bg-grey-50 flex justify-between items-center gap-x-3;
+
+    &--left {
+      @apply flex justify-start items-center gap-x-8 sm:gap-x-4;
+
+      .action-item {
+        @apply flex justify-start items-center gap-x-2 text-grey-700 cursor-pointer transition duration-300 ease-in-out hover:text-orange-500 sm:border sm:border-grey-200 sm:rounded-xl sm:size-9 sm:min-w-9 sm:min-h-9 sm:justify-center;
+
+        .icon {
+          @apply text-base sm:text-xl;
+        }
+
+        .text {
+          @apply text-sm font-medium sm:hidden;
+        }
+      }
+    }
+  }
+}

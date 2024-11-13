@@ -1,0 +1,53 @@
+.inspiration-card {
+  @apply relative cursor-pointer mb-4 break-inside-avoid border border-gray-200 rounded-3xl transition-all duration-300 ease-in-out;
+
+  img {
+    @apply object-cover w-full h-full rounded-3xl;
+  }
+
+  .inspiration-overlay {
+    @apply absolute inset-0 w-full h-full bg-black/50 rounded-3xl p-5 opacity-0 transition-opacity duration-300 ease-in-out transform scale-95;
+
+    .top-row {
+      @apply flex justify-between items-start gap-x-3;
+
+      &--left {
+        @apply flex justify-start items-start gap-x-2.5;
+      }
+
+      .action-item {
+        @apply relative rounded-lg size-[34px] min-w-[34px] min-h-[34px] bg-white flex justify-center items-center;
+
+        .icon {
+          @apply text-grey-800 text-[19px];
+        }
+      }
+
+      .dropdown-menu {
+        @apply absolute flex flex-col gap-y-1 right-0 top-10 w-auto h-auto bg-white shadow-lg rounded-lg p-1.5;
+
+        &-item {
+          @apply py-2 pl-3 pr-4 flex justify-start items-center gap-x-2.5 transition duration-300 ease-in-out rounded-md text-grey-700 cursor-pointer;
+
+          .icon {
+            @apply font-medium text-base;
+          }
+
+          .text {
+            @apply text-nowrap text-sm font-medium;
+          }
+
+          &:hover {
+            @apply bg-orange-50 text-orange-500;
+          }
+        }
+      }
+    }
+  }
+
+  &:hover {
+    .inspiration-overlay {
+      @apply opacity-100 scale-100;
+    }
+  }
+}

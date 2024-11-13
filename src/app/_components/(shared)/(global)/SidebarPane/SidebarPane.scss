@@ -1,0 +1,57 @@
+.sidebar-block {
+  @apply relative h-full w-full;
+
+  .brand-logo {
+    @apply mb-[52px] px-4 mt-7;
+
+    img {
+      @apply ml-4 lg:ml-0 w-[142px] h-auto;
+    }
+  }
+
+  .nav-area {
+    @apply px-4;
+
+    .navigations {
+      @apply flex flex-col justify-start items-start gap-y-1;
+
+      .nav-item {
+        @apply w-full rounded-[10px] px-6 xl:px-5 py-[15.5px] xl:py-[14.5px] flex justify-start items-center gap-x-3.5 xl:gap-x-2.5 text-grey-700/85 transition duration-300 ease-in-out hover:bg-orange-50/50;
+
+        .nav-text {
+          @apply text-[15.25px] xl:text-[14px] font-medium;
+        }
+      }
+
+      .nav-item-active {
+        @apply bg-orange-50 text-orange-500;
+      }
+    }
+
+    .nav-category {
+      @apply mt-6 mb-2.5 text-grey-500/90 text-[15.75px] xl:text-[14.5px];
+    }
+  }
+
+  .nav-base-wrapper {
+    @apply absolute w-full bottom-12 px-4 xl:px-3;
+
+    .coming-soon-card {
+      @apply bg-grey-50 border border-grey-100 rounded-[10px] overflow-hidden w-full h-auto p-[18px] xl:p-3;
+
+      .primary-tag {
+        @apply w-max mb-2.5 bg-orange-50 px-3 py-[7px] text-xs text-orange-500 font-medium rounded-[20px];
+        box-shadow: 1px -1px 0.5px 0px #0000001f inset;
+        box-shadow: 0px 1px 0px 0px #00000040;
+      }
+
+      .primary-title {
+        @apply mb-[3px] text-grey-800 font-medium text-sm xl:text-[13.75px];
+      }
+
+      .primary-description {
+        @apply text-grey-500/95 text-xs leading-[18px];
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+.mood-card {
+  @apply rounded-xl border border-grey-100/60 p-2.5 pb-4 cursor-pointer transition duration-300 ease-in-out hover:scale-[0.98] hover:bg-grey-50/20;
+
+  &--top {
+    @apply relative rounded-lg bg-grey-50 overflow-hidden mb-3 h-[254px] xl:h-[232px] flex justify-center items-center;
+
+    .date-indicator {
+      @apply absolute top-2.5 right-2.5 rounded-xl py-[5px] px-2 bg-grey-700 flex justify-center items-center gap-x-1 w-max;
+
+      .indicator {
+        @apply rounded-full size-1 min-w-1 min-h-1 bg-white;
+      }
+
+      .time {
+        @apply text-white text-[10px];
+      }
+    }
+
+    .mood-ui {
+      @apply relative;
+    }
+  }
+
+  &--base {
+    @apply flex justify-between items-center gap-x-3;
+
+    .primary-text {
+      @apply text-grey-700 font-semibold text-base xl:text-[15px] mb-0.5;
+    }
+
+    .secondary-text {
+      @apply text-grey-400 text-sm xl:text-[13px];
+    }
+
+    .card-action-btn {
+      @apply py-2 px-5 bg-orange-50 text-orange-500 shadow transition duration-300 ease-in-out hover:bg-orange-100/40;
+    }
+
+    .options {
+      @apply bg-grey-50 rounded-lg size-9 min-w-9 min-h-9 flex justify-center items-center cursor-pointer border border-grey-100/50 transition duration-300 ease-in-out hover:bg-orange-50;
+
+      .icon {
+        @apply relative rotate-90 text-grey-700 text-xl;
+      }
+    }
+  }
+}

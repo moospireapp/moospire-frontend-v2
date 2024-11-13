@@ -1,0 +1,117 @@
+.board-details {
+  @apply relative mb-12 rounded-[30px] bg-white p-8 xl:p-6 sm:p-4 flex md:flex-col justify-between items-start gap-x-10 xl:gap-8 md:gap-10 border border-grey-100 shadow-md;
+
+  .board-img {
+    @apply w-[60%] md:w-full;
+
+    img {
+      @apply object-cover w-full h-full;
+    }
+  }
+
+  .board-info {
+    @apply w-[40%] md:w-full p-6 xl:p-4 sm:p-1;
+
+    .options-row {
+      @apply flex justify-between items-center gap-x-4 mb-10;
+
+      &--left {
+        @apply flex justify-start items-center gap-x-2;
+      }
+
+      &--right {
+        @apply flex justify-end items-center gap-x-2;
+      }
+
+      .option-item {
+        @apply size-10 min-h-10 min-w-10 rounded-lg border border-grey-100 flex justify-center items-center transition duration-300 ease-in-out cursor-pointer;
+
+        .icon {
+          @apply text-grey-500 text-lg;
+        }
+
+        &:hover {
+          @apply bg-orange-50/80 border-orange-300;
+
+          .icon {
+            @apply text-orange-400;
+          }
+        }
+      }
+
+      .option-item-action {
+        @apply flex justify-center items-center gap-x-1.5 w-max px-3;
+
+        .icon {
+          @apply text-grey-700 text-lg;
+        }
+
+        .text {
+          @apply text-grey-500 text-sm font-medium;
+        }
+      }
+    }
+
+    .source-row {
+      @apply flex flex-wrap justify-between items-center gap-x-4 pb-6 border-b border-b-grey-100/65;
+
+      &--left {
+        @apply flex justify-start items-center gap-x-2.5;
+
+        .brand-icon {
+          @apply size-9 rounded-full;
+        }
+
+        .brand-name {
+          @apply text-grey-600 text-lg;
+        }
+      }
+
+      &--right {
+        .source-link {
+          @apply text-grey-300 text-[14.75px] font-medium underline hover:text-orange-300;
+        }
+      }
+    }
+
+    .tag-row {
+      @apply py-8 border-b border-b-grey-100/65 flex flex-wrap justify-start items-center gap-x-3 lg:gap-y-3;
+
+      .tag-item {
+        @apply rounded-lg py-2.5 px-5 w-max text-grey-600 font-medium text-sm border border-grey-200/70;
+      }
+    }
+
+    .colors-row {
+      @apply py-8 border-b border-b-grey-100/65;
+
+      .title-text {
+        @apply text-lg text-grey-600 mb-3;
+      }
+
+      .color-row {
+        @apply flex flex-wrap justify-start items-center gap-x-3 lg:gap-y-3;
+
+        .color-item {
+          @apply rounded-lg py-2.5 px-5 w-max text-grey-600 font-medium text-sm border border-grey-200/70;
+        }
+      }
+    }
+
+    .analytics-row {
+      @apply pt-6 pb-12 flex justify-start items-center gap-x-2;
+
+      .analytic-item {
+        @apply flex justify-start items-center gap-x-0.5 w-max;
+
+        .icon {
+          @apply text-lg text-grey-400;
+        }
+
+        .count {
+          @apply text-sm text-grey-400;
+        }
+      }
+    }
+  }
+}

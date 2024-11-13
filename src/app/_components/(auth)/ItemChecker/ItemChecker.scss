@@ -1,0 +1,11 @@
+.item-checker {
+  @apply relative overflow-hidden rounded-[10px] bg-grey-50/70 border border-grey-100/90 py-[17px] sm:py-4 px-4 flex justify-start items-center gap-3.5 sm:gap-3 cursor-pointer transition duration-300 ease-in-out hover:bg-grey-100/30;
+
+  .item-text {
+    @apply text-[15.75px] md:text-[15px] sm:text-[14.5px] text-grey-700/80 font-medium;
+  }
+
+  &.checked {
+    @apply bg-orange-50 border border-orange-500 text-orange-500;
+  }
+}

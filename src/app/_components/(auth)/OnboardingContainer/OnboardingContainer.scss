@@ -1,0 +1,60 @@
+.onboarding-container {
+  @apply relative rounded-[10px] bg-white overflow-hidden py-[38px] sm:py-[32px] xs:py-[28px] px-[42px] sm:px-[28px] xs:px-[22px] mb-16;
+  box-shadow: 2px 6px 13px 2px rgba(152, 124, 106, 0.22);
+
+  .pattern-bg {
+    @apply absolute bottom-0 right-0 w-[320px] md:w-[260px] sm:w-[200px] xs:hidden h-auto;
+  }
+
+  .top-row {
+    @apply relative z-10 flex justify-between items-center mb-14;
+
+    .progress-section {
+      @apply flex justify-start items-center gap-x-2.5 w-3/5 sm:w-[75%];
+
+      .progress-bar {
+        @apply relative overflow-hidden h-[16px] sm:h-[15px] w-full rounded-full bg-[#D9D9D9];
+
+        &--fill {
+          @apply absolute left-0 h-full rounded-full bg-orange-500 transition-all duration-500 ease-out;
+        }
+      }
+
+      .progress-step {
+        @apply w-max text-nowrap text-sm sm:text-[13.5px] text-black-accent font-medium;
+      }
+    }
+
+    .action-item {
+      @apply cursor-pointer text-orange-500 underline font-medium text-[14.5px] sm:text-[14px] transition duration-300 ease-in-out hover:no-underline hover:text-orange-600;
+    }
+  }
+
+  .base-row {
+    @apply relative z-10;
+
+    .primary-text {
+      @apply text-black-accent text-[34px] sm:text-[28px] xs:text-[24px] leading-[48px] lg:leading-[44px] sm:leading-[38px] font-bold mb-1;
+    }
+
+    .secondary-text {
+      @apply text-grey-600 text-base lg:text-[15.5px] sm:text-[15px] xs:text-[14.5px] leading-[28px] sm:leading-[26px] xs:leading-[24px] mb-10 w-full;
+    }
+  }
+
+  .selection-row {
+    @apply flex flex-wrap justify-start items-start gap-x-7 lg:gap-x-6 gap-y-6 mb-12 w-[98%];
+  }
+
+  .action-row {
+    @apply flex justify-between items-center gap-x-4;
+
+    .btn-primary {
+      @apply w-[170px] xs:w-[150px];
+    }
+
+    .btn-secondary {
+      @apply w-[140px] xs:w-[120px];
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.user-profile-group {
+  .profile-top-row {
+    @apply flex justify-between items-center gap-x-3 mb-10;
+
+    .profile-img-wrapper {
+      @apply relative;
+
+      .profile-img {
+        @apply rounded-full size-[108px] md:size-[90px] min-h-[108px] md:min-h-[90px] min-w-[108px] md:min-w-[90px] border border-grey-100/40 bg-grey-50/30;
+
+        img {
+          @apply w-full h-full object-cover rounded-full;
+        }
+      }
+
+      .upload-img {
+        @apply absolute z-10 size-12 md:size-10 min-h-12 md:min-h-10 min-w-12 md:min-w-10 rounded-full bg-[#F7F5F4] -bottom-2 -right-2 flex justify-center items-center cursor-pointer text-grey-600 transition duration-300 ease-in-out hover:bg-orange-50 hover:text-orange-500;
+
+        .icon {
+          @apply text-2xl md:text-xl;
+        }
+      }
+    }
+  }
+
+  .proflie-form {
+  }
+}

@@ -1,0 +1,56 @@
+.topbar-block {
+  @apply relative w-full flex justify-between items-center gap-x-3 px-[18px] sm:px-3 py-[19px] sm:py-4;
+  z-index: 9999;
+
+  &--left {
+    @apply flex justify-start items-center gap-x-3 sm:gap-x-2 w-1/2 md:w-[60%];
+
+    .icon-menu {
+      @apply hidden lg:block text-grey-500/75 cursor-pointer text-[40px];
+    }
+
+    .page-title {
+      @apply text-grey-400 text-xl md:text-lg font-semibold sm:hidden;
+    }
+
+    .search-input {
+      @apply relative w-full overflow-hidden;
+
+      .icon-search {
+        @apply absolute top-1/2 -translate-y-1/2 left-7 z-10 text-grey-600;
+      }
+
+      .form-control {
+        @apply border border-grey-200/50 bg-grey-100/30 text-grey-600 pl-14 lg:py-3.5 sm:py-3 placeholder:text-grey-400;
+      }
+    }
+  }
+
+  .top-items {
+    @apply flex justify-end items-center gap-x-4 sm:gap-x-3;
+
+    .item-square {
+      @apply relative rounded-xl overflow-hidden size-[36px] min-w-[36px] min-h-[36px] flex justify-center items-center border border-grey-200/75 text-black-accent/90 cursor-pointer transition duration-300 ease-in-out hover:bg-orange-50/50 hover:text-orange-600;
+
+      .icon {
+        @apply text-[22px] sm:text-lg;
+      }
+
+      img {
+        @apply object-cover w-full h-full cursor-pointer;
+      }
+    }
+
+    .search-item {
+      @apply hidden sm:flex;
+    }
+
+    .profile-toggler {
+      @apply relative flex justify-end items-center gap-x-2 cursor-pointer;
+
+      .icon-toggle {
+        @apply text-[22px] font-medium text-black-accent cursor-pointer transition ease-in-out duration-300;
+      }
+    }
+  }
+}

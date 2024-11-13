@@ -1,0 +1,51 @@
+.auth-entry-layout {
+  @apply relative min-h-screen inset-0 bg-orange-50;
+
+  .auth-left-pane {
+    @apply fixed md:hidden w-1/2 h-screen left-0 top-0 bg-orange-500 border-red-600;
+
+    .background-img {
+      @apply absolute w-full h-screen object-cover;
+    }
+
+    .content-area {
+      @apply relative z-10 mt-[72px] mx-auto w-4/5 xl:w-[94%];
+
+      .brand-logo {
+        @apply mb-[92px];
+
+        img {
+          @apply w-[138px] xl:w-[116px] lg:w-[108px] h-auto;
+        }
+      }
+
+      .primary-text {
+        @apply text-[60px] xl:text-[50px] lg:text-[42px] leading-[72px] xl:leading-[62px] lg:leading-[56px] font-semibold text-white mb-5 xl:w-[90%];
+      }
+
+      .secondary-text {
+        @apply text-[18.5px] xl:text-[16.5px] lg:text-[15.5px] leading-[28px] lg:leading-[27px] text-white w-[90%] lg:w-[95%];
+      }
+    }
+
+    .footer-copy {
+      @apply absolute z-10 bottom-7 lg:bottom-5 right-10 lg:right-6 text-white text-[13px] lg:text-[12.75px] leading-[16px];
+    }
+  }
+
+  .auth-right-pane {
+    @apply relative w-1/2 md:w-full left-1/2 md:left-0 top-0 pb-5;
+
+    .ellipse-img {
+      @apply fixed top-0 right-0;
+    }
+
+    .brand-logo-mobile {
+      @apply relative z-10 hidden md:w-[90%] mx-auto md:flex justify-center md:mt-16 sm:mt-12 md:mb-14 sm:mb-12;
+
+      img {
+        @apply md:w-[152px] sm:w-[146px] xs:w-[128px] h-auto;
+      }
+    }
+  }
+}

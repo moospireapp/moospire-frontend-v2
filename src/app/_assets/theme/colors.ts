@@ -1,0 +1,66 @@
+export const COLORS: Record<string, string> = {
+  // ORANGE VARIABLES
+  "orange-50": "#ffefeb",
+  "orange-100": "#fdc0af",
+  "orange-200": "#fda187",
+  "orange-300": "#fc815f",
+  "orange-400": "#fb6237",
+  "orange-500": "#e13405",
+  "orange-600": "#c82f04",
+  "orange-700": "#a02503",
+  "orange-800": "#781c02",
+  "orange-900": "#2c0a01",
+
+  // YELLOW VARIABLES
+  "yellow-50": "#fefbec",
+  "yellow-100": "#fcf3c5",
+  "yellow-200": "#f9e78b",
+  "yellow-300": "#f6db58",
+  "yellow-400": "#f3d226",
+  "yellow-500": "#e9c40c",
+  "yellow-600": "#ae9309",
+  "yellow-700": "#887207",
+  "yellow-800": "#615205",
+  "yellow-900": "#3a3103",
+
+  // RED VARIABLES
+  "red-50": "#feecf1",
+  "red-100": "#facedb",
+  "red-200": "#fd92b2",
+  "red-300": "#f26b94",
+  "red-400": "#f0356d",
+  "red-500": "#d20f49",
+  "red-600": "#b00c3d",
+  "red-700": "#990b35",
+  "red-800": "#55061e",
+  "red-900": "#26030e",
+
+  // GREY VARIABLES
+  "grey-50": "#f7f5f4",
+  "grey-100": "#e2dfdd",
+  "grey-200": "#c4bebc",
+  "grey-300": "#ada4a1",
+  "grey-400": "#968b88",
+  "grey-500": "#807471",
+  "grey-600": "#6c6461",
+  "grey-700": "#564f4d",
+  "grey-800": "#363230",
+  "grey-900": "#161413",
+
+  "neutral-100": "#f1f3f5",
+  "neutral-200": "#e9ecef",
+  "neutral-300": "#dee2e6",
+  "neutral-400": "#ced4da",
+  "neutral-500": "#adb5bd",
+  "neutral-600": "#868e96",
+  "neutral-700": "#636c72",
+  "neutral-800": "#495057",
+  "neutral-900": "#343a40",
+
+  // WHITE VARIABLES
+  white: "#fff",
+
+  // BLACK VARIABLES
+  black: "#000",
+  "black-accent": "#160602",
+};

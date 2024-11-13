@@ -1,0 +1,16 @@
+.card-stack {
+  @apply relative size-[132px] xl:size-[116px] min-w-[132px] xl:min-w-[116px] min-h-[132px] xl:min-h-[116px] -left-4;
+
+  .stack {
+    @apply absolute inset-0 w-full h-full rounded-xl border-2 border-white;
+    transform-origin: 0% 100%;
+  }
+
+  .stack-two {
+    transform: rotate(8deg);
+  }
+
+  .stack-three {
+    transform: rotate(16deg);
+  }
+}

@@ -1,0 +1,90 @@
+a,
+.link {
+  @apply text-orange-400 text-[13.75px] transition-all duration-500 ease-out no-underline cursor-pointer hover:text-orange-500 hover:no-underline focus:text-orange-600;
+
+  &:focus {
+    .no-touch & {
+      outline: none;
+    }
+  }
+}
+
+button {
+  @apply w-auto h-auto text-center shadow-[unset] cursor-pointer outline-0 border-0;
+
+  &:focus,
+  &:visited {
+    @apply shadow-[unset] outline-0 border-0;
+  }
+  &:disabled {
+    @apply pointer-events-none cursor-not-allowed select-none;
+  }
+}
+
+.btn {
+  @apply flex text-nowrap justify-center items-center gap-x-[10px] text-[16px] font-normal no-underline bg-transparent shadow-[unset] transition-all duration-300 ease-in-out rounded-lg relative text-center max-w-[100%] cursor-pointer border-0;
+
+  &:hover,
+  &:focus {
+    @apply no-underline shadow-[unset] outline-0;
+
+    .no-touch & {
+      @apply shadow-[unset] outline-0;
+    }
+  }
+
+  .btn--icon {
+    @apply text-lg;
+  }
+
+  .btn--text {
+    @apply relative;
+  }
+}
+
+.btn-sm {
+  @apply py-[9px] px-5 text-sm;
+}
+
+.btn-md {
+  @apply py-2.5 px-8 text-[15.5px];
+}
+
+.btn-lg {
+  @apply py-[14.5px] sm:py-[14px] px-10 text-[15.75px] sm:text-[15.5px];
+}
+
+// ===========================
+// BUTTON COLORS VARIANTS
+// ===========================
+.btn-primary {
+  @apply bg-orange-500 border border-orange-500 text-white;
+
+  &:hover {
+    @apply bg-orange-600 border border-orange-600;
+  }
+
+  &:focus {
+    @apply bg-orange-700 border border-orange-700;
+  }
+
+  &:disabled {
+    @apply bg-orange-100 border border-orange-100;
+  }
+
+  &-outline {
+    @apply bg-transparent border border-orange-500 text-orange-500;
+
+    &:hover {
+      @apply bg-orange-50;
+    }
+  }
+}
+
+.btn-secondary {
+  @apply bg-grey-50 border border-grey-100 text-grey-800;
+
+  &:hover {
+    @apply bg-grey-100/65;
+  }
+}

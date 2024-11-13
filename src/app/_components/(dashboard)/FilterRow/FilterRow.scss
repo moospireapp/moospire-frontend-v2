@@ -1,0 +1,20 @@
+.filter-row {
+  @apply w-full px-5 sm:px-3 py-4 flex justify-start items-center gap-x-2.5 border-b border-b-grey-200/80;
+  overflow: overlay;
+
+  &::-webkit-scrollbar {
+    @apply h-0;
+  }
+
+  &::-webkit-scrollbar-track {
+    @apply rounded-sm;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    @apply rounded-sm bg-grey-100/50;
+  }
+
+  .filter-card {
+    @apply rounded-[10px] py-3 xl:py-2.5 px-6 xl:px-5 border border-grey-300 w-auto text-sm xl:text-[13.5px] font-medium text-grey-700 text-center cursor-pointer text-nowrap transition duration-300 ease-in-out hover:bg-grey-100/55;
+  }
+}

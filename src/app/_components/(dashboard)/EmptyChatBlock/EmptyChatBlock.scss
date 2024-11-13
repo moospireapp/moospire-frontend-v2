@@ -1,0 +1,27 @@
+.empty-chat-block {
+  @apply w-[54%] xl:w-[80%] sm:w-[90%] xs:w-[96%] ml-24 sm:ml-8 xs:ml-2 pt-8;
+
+  .title-text {
+    @apply text-[32px] xl:text-[30px] sm:text-xl leading-[44px] sm:leading-[32px] font-semibold text-grey-500 mb-8 xs:mb-6 pr-10;
+  }
+
+  .item-list {
+    @apply flex flex-col gap-y-7 xs:gap-y-5 justify-start items-start;
+
+    .item-row {
+      @apply flex justify-start items-center gap-x-4;
+
+      .item-wrapper {
+        @apply size-11 min-h-11 min-w-11 rounded-full flex justify-center items-center;
+      }
+
+      .primary-text {
+        @apply text-grey-800 text-base sm:text-[15px] xs:text-[14.5px] font-medium mb-1.5 xs:mb-1;
+      }
+
+      .secondary-text {
+        @apply text-sm xs:text-[13.5px] xs:leading-[22px] text-grey-500;
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.chat-block {
+  @apply w-[70%] xl:w-[90%] lg:w-full mx-auto relative flex flex-col h-[calc(100vh-168px)];
+
+  .chat-display-area {
+    @apply overflow-y-auto flex-grow;
+
+    &::-webkit-scrollbar {
+      @apply w-1;
+    }
+
+    &::-webkit-scrollbar-track {
+      @apply rounded-sm;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      @apply rounded-sm bg-grey-200;
+    }
+  }
+
+  .chat-input-area {
+    @apply w-full mb-4;
+  }
+}

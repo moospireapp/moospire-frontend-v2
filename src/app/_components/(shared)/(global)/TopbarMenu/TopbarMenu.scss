@@ -1,0 +1,55 @@
+.base-dropdown {
+  @apply absolute right-0 mt-2.5 h-auto w-[140%] rounded-[10px] px-[13px] py-4 shadow-sm border border-grey-100 bg-white animate-slide-down z-30;
+
+  .dropdown-wrapper {
+    @apply relative w-full h-full after:absolute after:size-3 after:border after:border-grey-200/95 after:right-[20%] after:-top-3 after:bg-white after:rotate-45 after:border-r-0 after:border-b-0 z-30;
+  }
+}
+
+.menu-card {
+  @apply w-[270px];
+
+  .profile-details {
+    @apply flex justify-start items-center gap-2 pt-0.5 pb-4 border-b border-grey-100 mb-1.5;
+
+    .profile-avatar {
+      @apply relative size-10 min-w-10 min-h-10 overflow-hidden rounded-[10px] border border-grey-200/80;
+
+      img {
+        @apply w-full h-full object-cover;
+      }
+    }
+
+    .top-row {
+      @apply flex justify-start items-center gap-1.5 mb-[1px];
+
+      .profile-name {
+        @apply text-grey-900 font-medium text-[15.5px];
+      }
+
+      .profile-status {
+        @apply rounded-[5px] bg-yellow-100 border border-yellow-400 py-0.5 px-2 font-medium text-[10.5px] text-yellow-600;
+      }
+    }
+
+    .bottom-row {
+      @apply text-grey-300 font-medium text-xs;
+    }
+  }
+
+  .menu-list {
+    @apply flex flex-col justify-start items-start gap-y-1 w-full;
+
+    .menu-list-item {
+      @apply w-full text-grey-900 px-4 py-[10px] cursor-pointer flex justify-start items-center gap-x-4 transition duration-100 ease-in-out hover:bg-grey-50/90;
+
+      .icon {
+        @apply text-lg;
+      }
+
+      .text {
+        @apply text-[14.5px] font-medium text-grey-600;
+      }
+    }
+  }
+}

@@ -1,0 +1,70 @@
+.form-text-block {
+  .form-block-input {
+    @apply relative;
+
+    .prefix-item,
+    .suffix-item,
+    .suffix-date-item,
+    textarea {
+      @apply hidden;
+    }
+
+    &.has-prefix {
+      .prefix-item {
+        @apply absolute block top-1/2 -translate-y-1/2 left-5 sm:left-4 z-10;
+
+        .prefix-icon {
+          @apply w-[22px] sm:w-[19px] h-[22px] sm:h-[19px] text-grey-400;
+        }
+      }
+
+      .form-control {
+        @apply pl-14 sm:pl-[45px];
+      }
+    }
+
+    &.has-suffix {
+      .suffix-item {
+        @apply absolute block top-1/2 -translate-y-1/2 right-5 sm:right-4 z-10;
+
+        .suffix-icon {
+          @apply w-[22px] h-[22px] text-grey-400/80 cursor-pointer transition duration-300 ease-in-out hover:text-orange-500/75;
+        }
+      }
+    }
+
+    &.has-date-suffix {
+      .suffix-date-item {
+        @apply absolute block top-1/2 -translate-y-1/2 right-5 z-10;
+
+        .suffix-date-icon {
+          @apply w-[22px] h-[22px] text-grey-400 bg-white;
+        }
+      }
+
+      .form-control:disabled + .suffix-date-item {
+        .suffix-date-icon {
+          @apply text-grey-400 cursor-not-allowed;
+        }
+      }
+
+      .form-control-sm + .suffix-date-item {
+        @apply right-4;
+      }
+    }
+
+    &.is-text-area {
+      input {
+        @apply hidden;
+      }
+
+      textarea {
+        @apply block;
+      }
+    }
+  }
+
+  .validator-msg {
+    @apply pl-0.5 mt-[3px] text-orange-400 font-medium text-[12.75px];
+  }
+}

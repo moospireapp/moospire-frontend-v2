@@ -1,0 +1,44 @@
+@use "sass:math";
+
+//==============================
+// CONVERT UNITS IN PX TO REM
+//==============================
+@function toRem($size) {
+  $result: math.div($size, 16);
+  @return #{$result}rem;
+}
+
+// =======================
+// DRAW SHAPE BUILDER
+// =======================
+@mixin draw-shape($width, $height: "") {
+  min-width: toRem($width);
+  width: toRem($width);
+
+  @if $width == $height or $height== "" {
+    min-height: toRem($width);
+    height: toRem($width);
+  } @else {
+    min-height: toRem($height);
+    height: toRem($height);
+  }
+}
+
+// ======================
+// PLACE AT CENTER
+// ======================
+@mixin center-placement($axis: "") {
+  position: absolute;
+
+  @if $axis == "y-axis" {
+    top: 50%;
+    transform: translateY(-50%);
+  } @else if $axis == "x-axis" {
+    left: 50%;
+    transform: translateX(-50%);
+  } @else {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
