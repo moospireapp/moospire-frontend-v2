@@ -115,7 +115,7 @@ const TextInputField = ({
         break;
 
       case "validateEmail":
-        setFormErrorMsg(validateEmail(value, message));
+        setFormErrorMsg(validateEmail(value));
         break;
 
       case "validateNumberEntry":
