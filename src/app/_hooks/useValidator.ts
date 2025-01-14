@@ -2,6 +2,46 @@ export default function useValidator() {
   const emailRegex =
     /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
+  const commonTLDs = [
+    "com",
+    "org",
+    "net",
+    "edu",
+    "gov",
+    "io",
+    "co",
+    "us",
+    "uk",
+    "ca",
+    "de",
+    "fr",
+    "au",
+    "in",
+    "cn",
+    "jp",
+    "nl",
+    "br",
+    "mx",
+    "ru",
+    "ch",
+    "it",
+    "za",
+    "es",
+    "se",
+    "no",
+    "fi",
+    "dk",
+    "pl",
+    "be",
+    "at",
+    "gr",
+    "pt",
+    "cz",
+    "hu",
+    "ie",
+    "nz",
+  ];
+
   const trimInput = (inputText: string | number) => {
     return typeof inputText === "number"
       ? inputText.toString().trim()
@@ -21,12 +61,32 @@ export default function useValidator() {
     return trimmedInput.length ? "" : message;
   };
 
-  const validateEmail = (
+  const validateEmailStructure = (
     input: string,
     message: string = "Please provide a valid email address"
   ) => {
+    return emailRegex.test(input) ? "" : message;
+  };
+
+  const validateEmailTLD = (
+    input: string,
+    message: string = "Invalid or uncommon email TLD"
+  ) => {
+    const domainParts = input.split(".");
+    const tld = domainParts[domainParts.length - 1].toLowerCase();
+    return commonTLDs.includes(tld) ? "" : message;
+  };
+
+  const validateEmail = (input: string) => {
     const trimmedInput = trimInput(input);
-    return emailRegex.test(trimmedInput) ? "" : message;
+
+    const structureError = validateEmailStructure(trimmedInput);
+    if (structureError) return structureError;
+
+    const tldError = validateEmailTLD(trimmedInput);
+    if (tldError) return tldError;
+
+    return "";
   };
 
   const validateNumberEntry = (

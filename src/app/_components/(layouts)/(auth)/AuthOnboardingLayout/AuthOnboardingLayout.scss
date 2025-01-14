@@ -1,5 +1,5 @@
 .auth-onboarding-layout {
-  @apply relative min-h-screen inset-0 bg-orange-50;
+  @apply relative min-h-screen inset-0 bg-orange-50 border border-transparent;
 
   .ellipse-img {
     @apply fixed top-0 right-0 w-[540px] h-[540px];

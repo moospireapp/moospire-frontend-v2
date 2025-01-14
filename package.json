@@ -1,11 +1,12 @@
 {
-  "name": "moospire-frontend-app",
+  "name": "moospire-frontend",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "serve:prod": "pm2 start npm --name moospire-frontend -- start",
     "lint": "next lint"
   },
   "dependencies": {
